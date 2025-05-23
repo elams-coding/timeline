@@ -19,7 +19,11 @@ Le but du jeu est de placer correctement les cartes représentant les langages d
 
 ## 📚 Données
 Les cartes sont constituées d’un nom de langage de programmation et de son année de création.
-*Exemples :* C — 1972, Python — 1991, JavaScript — 1995
+
+*Exemples :*
+- C — 1972
+- Python — 1991
+- JavaScript — 1995
 
 ## 🚧 Statut actuel
 Le projet est en cours de développement.
@@ -28,6 +32,3 @@ Le projet est en cours de développement.
 - Mode multijoueur local
 - Ajout d’un score ou d’un système de points
 - Sauvegarde de partie
-
-## 🤝 Contribution
-Elams
