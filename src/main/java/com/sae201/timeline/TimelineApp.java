@@ -15,7 +15,7 @@ public class TimelineApp extends Application {
     }
 
     @Override
-    public void start(Stage stage) {
+    public void start(@SuppressWarnings("exports") Stage stage) {
         String cheminVueAccueil = "/com/sae201/timeline/accueil.fxml";
         FXMLLoader loader = new FXMLLoader(getClass().getResource(cheminVueAccueil));
         try {
