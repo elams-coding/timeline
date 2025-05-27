@@ -1,13 +1,13 @@
 package com.sae201.timeline;
 
+import static com.sae201.timeline.util.DialogueUtilitaire.alerterChargementVueImpossible;
+
+import java.io.IOException;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-import static com.sae201.timeline.util.DialogueUtilitaire.alerterChargementVueImpossible;
-
-import java.io.IOException;
 
 public class TimelineApp extends Application {
     public static void main(String[] args) {

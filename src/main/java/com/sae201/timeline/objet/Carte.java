@@ -1,19 +1,35 @@
 package com.sae201.timeline.objet;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+import java.time.YearMonth;
+
+import javafx.scene.image.Image;
 
 public class Carte {
-    private static final int JOUR_PAR_DEFAUT = 1;
-    private static final DateTimeFormatter formatDeDate = DateTimeFormatter.ofPattern("yyyy mm");
-
     private String titre;
-    private static LocalDate date;
-
-    public static void main(String[] args) {
-        Carte.date = LocalDate.of(2010, 12, JOUR_PAR_DEFAUT);
-        String dateFormatee = date.format(formatDeDate);
-
-        System.out.println(dateFormatee);
+    private YearMonth date;
+    private Image image;
+    private String informations;
+    
+    public Carte(String titre, YearMonth date, Image image, String informations) {
+    	this.titre = titre;
+    	this.date = date;
+    	this.image = image;
+    	this.informations = informations;
     }
+
+	public String getTitre() {
+		return titre;
+	}
+
+	public YearMonth getDate() {
+		return date;
+	}
+
+	public Image getImage() {
+		return image;
+	}
+
+	public String getInformations() {
+		return informations;
+	}
 }
