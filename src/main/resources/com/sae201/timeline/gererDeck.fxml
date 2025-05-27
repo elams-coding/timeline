@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<StackPane alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sae201.timeline.controller.Accueil">
+<StackPane alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sae201.timeline.controller.GererDecks">
    <children>
       <VBox prefHeight="200.0" prefWidth="100.0" spacing="15.0">
          <children>
@@ -35,10 +35,10 @@
                <children>
                   <VBox fx:id="conteneurChoix" alignment="CENTER_LEFT" prefWidth="262.0" spacing="15.0">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#nouvelleCarte" text="Créer une nouvelle Carte" />
-                        <Button layoutX="10.0" layoutY="214.0" mnemonicParsing="false" onAction="#supprimerCarte" text="Supprimer la Carte" />
-                        <Button layoutX="10.0" layoutY="265.0" mnemonicParsing="false" onAction="#modifierCarte" text="Modifier la Carte" />
-                        <Button layoutX="10.0" layoutY="316.0" mnemonicParsing="false" onAction="#AfficherListeCarte" text="Affichage en liste" />
+                        <Button mnemonicParsing="false" text="Créer une nouvelle Carte" />
+                        <Button layoutX="10.0" layoutY="214.0" mnemonicParsing="false" text="Supprimer la Carte" />
+                        <Button layoutX="10.0" layoutY="265.0" mnemonicParsing="false" text="Modifier la Carte" />
+                        <Button layoutX="10.0" layoutY="316.0" mnemonicParsing="false" text="Affichage en liste" />
                      </children>
                   </VBox>
                   <VBox id="conteneur-carte" prefHeight="285.0" prefWidth="321.0">
