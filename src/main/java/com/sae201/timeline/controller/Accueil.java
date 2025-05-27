@@ -10,11 +10,11 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import static com.sae201.timeline.util.DialogueUtilitaire.afficherFonctionnaliteNonDisponible;
+import static com.sae201.timeline.util.DialogueUtilitaire.alerterChargementVueImpossible;
+import static com.sae201.timeline.util.StyleUtilitaire.styleBouton;
 
-import static com.sae201.timeline.utilitaire.DialogueUtilitaire.afficherFonctionnaliteNonDisponible;
-import static com.sae201.timeline.utilitaire.DialogueUtilitaire.alerterChargementVueImpossible;
-import static com.sae201.timeline.utilitaire.StyleUtilitaire.styleBouton;
+import java.io.IOException;
 
 public class Accueil {
     public static boolean estModeSolo;
@@ -81,11 +81,11 @@ public class Accueil {
         afficherFonctionnaliteNonDisponible("Aucune option pour l'instant.");
 
         /*
-        TODO faire les options de réglages :
-            - choix de la langue,
-            - choix du thème,
-            - activer/désactiver le son,
-            - activer/désactiver la musique de fond.
+         * TODO faire les options de réglages :
+         * - choix de la langue,
+         * - choix du thème,
+         * - activer/désactiver le son,
+         * - activer/désactiver la musique de fond.
          */
     }
 

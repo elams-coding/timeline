@@ -1,4 +1,4 @@
-package com.sae201.timeline.utilitaire;
+package com.sae201.timeline.util;
 
 import javafx.scene.control.Alert;
 
@@ -7,9 +7,12 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * Service utilitaire pour l'affichage des boîtes de dialogue dans l'application.
- * Cette classe fournit des méthodes statiques pour afficher différents types de dialogues,
- * notamment pour les fonctionnalités non disponibles et les erreurs de chargement.
+ * Service utilitaire pour l'affichage des boîtes de dialogue dans
+ * l'application.
+ * Cette classe fournit des méthodes statiques pour afficher différents types de
+ * dialogues,
+ * notamment pour les fonctionnalités non disponibles et les erreurs de
+ * chargement.
  */
 public abstract class DialogueUtilitaire {
     private static final Logger LOGGER = Logger.getLogger(DialogueUtilitaire.class.getName());
@@ -20,7 +23,8 @@ public abstract class DialogueUtilitaire {
     private static final String HEADER_VUE_IMPOSSIBLE = "Impossible de charger la vue";
 
     /**
-     * Affiche une boîte de dialogue pour une fonctionnalité non disponible avec un titre et un message personnalisés.
+     * Affiche une boîte de dialogue pour une fonctionnalité non disponible avec un
+     * titre et un message personnalisés.
      *
      * @param titre   Le titre de la boîte de dialogue
      * @param message Le message à afficher dans la boîte de dialogue
@@ -40,7 +44,8 @@ public abstract class DialogueUtilitaire {
     }
 
     /**
-     * Affiche une boîte de dialogue pour une fonctionnalité non disponible avec un message personnalisé.
+     * Affiche une boîte de dialogue pour une fonctionnalité non disponible avec un
+     * message personnalisé.
      * Le titre par défaut sera utilisé.
      *
      * @param message Le message à afficher dans la boîte de dialogue
@@ -50,7 +55,8 @@ public abstract class DialogueUtilitaire {
     }
 
     /**
-     * Affiche une boîte de dialogue pour une fonctionnalité non disponible avec le message par défaut.
+     * Affiche une boîte de dialogue pour une fonctionnalité non disponible avec le
+     * message par défaut.
      * Utilise le titre et le message par défaut.
      */
     public static void afficherFonctionnaliteNonDisponible() {
@@ -58,7 +64,8 @@ public abstract class DialogueUtilitaire {
     }
 
     /**
-     * Affiche une boîte de dialogue d'erreur pour un chargement de vue impossible avec un titre et un message personnalisés.
+     * Affiche une boîte de dialogue d'erreur pour un chargement de vue impossible
+     * avec un titre et un message personnalisés.
      *
      * @param titre   Le titre de la boîte de dialogue d'erreur
      * @param message Le message d'erreur à afficher
@@ -76,7 +83,8 @@ public abstract class DialogueUtilitaire {
     }
 
     /**
-     * Affiche une boîte de dialogue d'erreur pour un chargement de vue impossible avec un message personnalisé.
+     * Affiche une boîte de dialogue d'erreur pour un chargement de vue impossible
+     * avec un message personnalisé.
      * Le titre par défaut pour les erreurs sera utilisé.
      *
      * @param message Le message d'erreur à afficher

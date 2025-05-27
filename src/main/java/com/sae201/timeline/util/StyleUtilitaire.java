@@ -1,4 +1,4 @@
-package com.sae201.timeline.utilitaire;
+package com.sae201.timeline.util;
 
 import javafx.scene.control.Button;
 import javafx.scene.effect.DropShadow;

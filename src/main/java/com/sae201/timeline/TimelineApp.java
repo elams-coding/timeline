@@ -5,9 +5,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import static com.sae201.timeline.util.DialogueUtilitaire.alerterChargementVueImpossible;
 
-import static com.sae201.timeline.utilitaire.DialogueUtilitaire.alerterChargementVueImpossible;
+import java.io.IOException;
 
 public class TimelineApp extends Application {
     public static void main(String[] args) {

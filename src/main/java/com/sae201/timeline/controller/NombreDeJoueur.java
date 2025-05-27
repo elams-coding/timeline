@@ -1,13 +1,13 @@
 package com.sae201.timeline.controller;
 
+import static com.sae201.timeline.util.StyleUtilitaire.styleBouton;
+
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-
-import static com.sae201.timeline.utilitaire.StyleUtilitaire.styleBouton;
 
 public class NombreDeJoueur {
     @FXML
