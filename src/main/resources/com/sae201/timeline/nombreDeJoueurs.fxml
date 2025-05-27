@@ -16,7 +16,7 @@
          </VBox.margin></Label>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
          <children>
-            <Button contentDisplay="RIGHT" mnemonicParsing="false" styleClass="button-left" text="Un joueur">
+            <Button fx:id="unJoueur" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#jouer" styleClass="button-left" text="Un joueur">
                <graphic>
                   <ImageView fitHeight="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -39,7 +39,7 @@
                   <Image url="@../../../img/wavyLine.png" />
                </image>
             </ImageView>
-            <Button mnemonicParsing="false" styleClass="button-right" text="Deux joueurs">
+            <Button fx:id="deuxJoueurs" mnemonicParsing="false" onAction="#jouer" styleClass="button-right" text="Deux joueurs">
                <graphic>
                   <ImageView fitHeight="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
