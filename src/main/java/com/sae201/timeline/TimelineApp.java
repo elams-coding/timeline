@@ -1,6 +1,6 @@
 package com.sae201.timeline;
 
-import static com.sae201.timeline.util.DialogueUtilitaire.alerterChargementVueImpossible;
+import com.sae201.timeline.util.DialogueUtilitaire;
 
 import java.io.IOException;
 
@@ -24,11 +24,7 @@ public class TimelineApp extends Application {
             stage.setScene(scene);
             stage.show();
         } catch (IOException e) {
-            if (e.getCause() != null) {
-                alerterChargementVueImpossible(e.getCause().getMessage());
-            } else {
-                alerterChargementVueImpossible(e.getMessage());
-            }
+        	DialogueUtilitaire.afficherAlerte(e);
         }
     }
 }
