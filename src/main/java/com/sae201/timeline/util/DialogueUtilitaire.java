@@ -1,10 +1,10 @@
 package com.sae201.timeline.util;
 
-import javafx.scene.control.Alert;
-
 import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import javafx.scene.control.Alert;
 
 /**
  * Service utilitaire pour l'affichage des boîtes de dialogue dans
@@ -91,5 +91,13 @@ public abstract class DialogueUtilitaire {
      */
     public static void alerterChargementVueImpossible(String message) {
         alerterChargementVueImpossible(TITRE_ERREUR_PAR_DEFAUT, message);
+    }
+    
+    public static void afficherAlerte(Exception e) {
+    	if (e.getCause() != null) {
+			DialogueUtilitaire.alerterChargementVueImpossible(e.getCause().getMessage());
+		} else {
+			DialogueUtilitaire.alerterChargementVueImpossible(e.getMessage());
+		}
     }
 }
