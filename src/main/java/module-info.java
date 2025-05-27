@@ -3,6 +3,7 @@ module timeline {
     requires javafx.fxml;
     requires javafx.graphics;
     requires java.logging;
+	requires javafx.base;
 
     opens com.sae201.timeline to javafx.fxml;
 
