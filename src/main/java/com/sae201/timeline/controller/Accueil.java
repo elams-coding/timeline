@@ -72,6 +72,7 @@ public class Accueil {
 
     @FXML
     private void gererDecks(ActionEvent event) {
+    	// todo changer le la vue pour la gestion des decks
         String cheminVueGererDeck = "/com/sae201/timeline/gererDeck.fxml";
         loader = new FXMLLoader(getClass().getResource(cheminVueGererDeck));
         try {
