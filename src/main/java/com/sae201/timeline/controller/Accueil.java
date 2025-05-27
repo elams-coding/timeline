@@ -1,5 +1,12 @@
 package com.sae201.timeline.controller;
 
+import static com.sae201.timeline.util.DialogueUtilitaire.afficherFonctionnaliteNonDisponible;
+import static com.sae201.timeline.util.StyleUtilitaire.styleBouton;
+
+import com.sae201.timeline.util.DialogueUtilitaire;
+
+import java.io.IOException;
+
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,14 +17,10 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-import static com.sae201.timeline.util.DialogueUtilitaire.afficherFonctionnaliteNonDisponible;
-import static com.sae201.timeline.util.DialogueUtilitaire.alerterChargementVueImpossible;
-import static com.sae201.timeline.util.StyleUtilitaire.styleBouton;
-
-import java.io.IOException;
-
 public class Accueil {
     public static boolean estModeSolo;
+    private FXMLLoader loader;
+    private Stage stage;
 
     @FXML
     private VBox conteneurChoix;
@@ -41,11 +44,11 @@ public class Accueil {
     @FXML
     private void nouvellePartie(ActionEvent event) {
         String cheminVueNombreDeJoueurs = "/com/sae201/timeline/nombreDeJoueurs.fxml";
-        FXMLLoader loader = new FXMLLoader(getClass().getResource(cheminVueNombreDeJoueurs));
+        loader = new FXMLLoader(getClass().getResource(cheminVueNombreDeJoueurs));
         try {
             Scene scene = new Scene(loader.load());
             Scene sceneInitiale = ((Button) event.getSource()).getScene();
-            Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+            stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
             stage.close();
             stage.setScene(scene);
             stage.setTitle("Nombre de joueurs");
@@ -57,11 +60,7 @@ public class Accueil {
             });
             stage.show();
         } catch (IOException e) {
-            if (e.getCause() != null) {
-                alerterChargementVueImpossible(e.getCause().getMessage());
-            } else {
-                alerterChargementVueImpossible(e.getMessage());
-            }
+        	DialogueUtilitaire.afficherAlerte(e);
         }
     }
 
@@ -72,8 +71,24 @@ public class Accueil {
     }
 
     @FXML
-    private void gererDecks() {
-        afficherFonctionnaliteNonDisponible("Aucun deck pour le moment.");
+    private void gererDecks(ActionEvent event) {
+        String cheminVueGererDeck = "/com/sae201/timeline/gererDeck.fxml";
+        loader = new FXMLLoader(getClass().getResource(cheminVueGererDeck));
+        try {
+			Scene scene = new Scene(loader.load());
+			stage = new Stage();
+			stage.setScene(scene);
+			stage.setResizable(false);
+			stage.setTitle("Gérer les decks");
+			Scene sceneInitiale = ((Button) event.getSource()).getScene();
+			stage.setOnCloseRequest(e -> {
+                e.consume();
+                retourAccueil(sceneInitiale, stage);
+            });
+			stage.show();
+		} catch (IOException e) {
+			DialogueUtilitaire.afficherAlerte(e);
+		}
     }
 
     @FXML
