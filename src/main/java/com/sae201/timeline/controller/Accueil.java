@@ -1,9 +1,9 @@
 package com.sae201.timeline.controller;
 
 import static com.sae201.timeline.util.DialogueUtilitaire.afficherFonctionnaliteNonDisponible;
-import static com.sae201.timeline.util.StyleUtilitaire.styleBouton;
 
 import com.sae201.timeline.util.DialogueUtilitaire;
+import com.sae201.timeline.util.StyleUtilitaire;
 
 import java.io.IOException;
 
@@ -17,7 +17,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class Accueil {
+public class Accueil extends StyleUtilitaire {
 	public static boolean estModeSolo;
 	private FXMLLoader loader;
 	private Stage stage;
@@ -30,13 +30,14 @@ public class Accueil {
 		Platform.runLater(this::tailleBouton);
 	}
 
-	private void tailleBouton() {
+	@Override
+	public void tailleBouton() {
 		double largeurInitiale = conteneurChoix.getWidth();
 		for (Node node : conteneurChoix.getChildren()) {
 			if (node instanceof Button btn) {
 				btn.setMaxWidth(largeurInitiale);
 				largeurInitiale -= 10;
-				styleBouton(btn);
+				StyleUtilitaire.styleBouton(btn);
 			}
 		}
 	}

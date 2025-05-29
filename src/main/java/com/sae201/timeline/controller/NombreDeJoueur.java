@@ -1,8 +1,7 @@
 package com.sae201.timeline.controller;
 
-import static com.sae201.timeline.util.StyleUtilitaire.styleBouton;
-
 import com.sae201.timeline.util.DialogueUtilitaire;
+import com.sae201.timeline.util.StyleUtilitaire;
 
 import java.io.IOException;
 
@@ -27,16 +26,16 @@ public class NombreDeJoueur {
 
 	@FXML
 	private void initialize() {
-		Platform.runLater(this::styleButton);
+		Platform.runLater(this::styliserBouton);
 		nbJoueur = 0;
 	}
 
-	private void styleButton() {
+	private void styliserBouton() {
 		for (Node node : root.getChildren()) {
 			if (node instanceof HBox hbox) {
 				for (Node hboxChild : hbox.getChildren()) {
 					if (hboxChild instanceof Button btn) {
-						styleBouton(btn);
+						StyleUtilitaire.styleBouton(btn);
 					}
 				}
 			}
