@@ -5,7 +5,7 @@ import javafx.scene.effect.DropShadow;
 import javafx.scene.effect.InnerShadow;
 import javafx.scene.paint.Color;
 
-public class StyleUtilitaire {
+public abstract class StyleUtilitaire {
     public static void styleBouton(Button btn) {
         DropShadow dropShadow = new DropShadow();
         dropShadow.setColor(Color.rgb(0, 0, 0, 0.3));
@@ -22,4 +22,6 @@ public class StyleUtilitaire {
         dropShadow.setInput(innerShadow);
         btn.setEffect(dropShadow);
     }
+    
+    public abstract void tailleBouton();
 }
