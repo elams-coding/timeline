@@ -22,6 +22,7 @@ public class TimelineApp extends Application {
             Scene scene = new Scene(loader.load());
             stage.setTitle("Timeline");
             stage.setScene(scene);
+            stage.setResizable(false);
             stage.show();
         } catch (IOException e) {
         	DialogueUtilitaire.afficherAlerte(e);

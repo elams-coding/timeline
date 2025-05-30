@@ -113,7 +113,7 @@ public class Accueil extends StyleUtilitaire {
 		stage.close();
 		stage.setScene(sceneInitiale);
 		stage.setTitle("Timeline");
-		stage.setResizable(true);
+		stage.setResizable(false);
 		stage.setOnCloseRequest(e -> Platform.exit());
 		stage.show();
 	}
