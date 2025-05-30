@@ -5,8 +5,8 @@ Timeline est un projet JavaFX qui recrée le célèbre jeu de cartes Timeline (I
 Le but du jeu est de placer correctement les cartes représentant les langages de programmation sur une frise chronologique, selon leur année d'apparition/de création. Le joueur gagne s’il parvient à positionner toutes ses cartes sans se tromper !
 
 ## 🛠️ Technologies utilisées
-- Java
-- JavaFX
+- Java (17)
+- JavaFX (17.0.9)
 - FXML
 - Maven
 
@@ -19,6 +19,8 @@ Le but du jeu est de placer correctement les cartes représentant les langages d
 
 ## 📚 Données
 Les cartes sont constituées d’un nom de langage de programmation et de son année de création.
+
+*Si deux cartes ont été créées dans la même année alors on tiendra compte du mois de création.*
 
 *Exemples :*
 - C — 1972
