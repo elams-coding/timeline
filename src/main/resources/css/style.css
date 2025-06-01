@@ -4,30 +4,25 @@
 
 .label,
 .button {
-    -fx-text-fill: white;
     -fx-font-family: "Cabin Sketch";
-}
-
-.label {
-    -fx-font-size: 50;
+    -fx-font-size: 20;
+    -fx-text-fill: white;
 }
 
 .button {
     -fx-background-color: #2F2E65;
-    -fx-pref-width: 270;
-    -fx-font-size: 30;
-    -fx-padding: 5 20;
-    -fx-cursor: hand;
-}
-
-.button:hover {
-    -fx-background-color: derive(#2F2E65, -20%);
 }
 
 .button-left {
     -fx-background-radius: 0 50 50 0;
 }
 
+
 .button-right {
     -fx-background-radius: 50 0 0 50;
 }
+
+.titre {
+    -fx-font-size: 35;
+}
+
