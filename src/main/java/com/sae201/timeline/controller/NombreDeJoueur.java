@@ -18,7 +18,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class NombreDeJoueur {
-	private static int nbJoueur;
+	public static int nbJoueur;
 	@FXML
 	private VBox root;
 	@FXML
@@ -71,9 +71,5 @@ public class NombreDeJoueur {
 				DialogueUtilitaire.alerterChargementVueImpossible(e.getMessage());
 			}
 		}
-	}
-
-	public static int getNbJoueur() {
-		return nbJoueur;
 	}
 }

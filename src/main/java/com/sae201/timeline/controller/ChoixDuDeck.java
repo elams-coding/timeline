@@ -11,8 +11,8 @@ import javafx.scene.control.Slider;
 import javafx.scene.layout.VBox;
 
 public class ChoixDuDeck {
-	private static int temps;
-	
+	public static int temps;
+
 	@FXML
 	private VBox root;
 	@FXML
@@ -21,24 +21,19 @@ public class ChoixDuDeck {
 	private Slider sliderTemps;
 	@FXML
 	private Label labelTemps;
-	
+
 	@FXML
 	public void initialize() {
 		Platform.runLater(() -> StyleUtilitaire.effetOmbreEtGlow(choixDeck));
-		
+
 		int valeurInitial = (int) sliderTemps.getValue();
 		temps = valeurInitial;
 		labelTemps.setText(String.format("%02d", valeurInitial));
-		
+
 		sliderTemps.valueProperty().addListener((obs, oldVal, newVal) -> {
 			int valeur = newVal.intValue();
-	        temps = valeur;
-	        System.out.println(temps);
-	        labelTemps.setText(String.format("%02d", valeur));
+			temps = valeur;
+			labelTemps.setText(String.format("%02d", valeur));
 		});
-	}
-	
-	public static int getTemps() {
-		return temps;
 	}
 }
