@@ -23,7 +23,7 @@ public class GererDeck {
 	private void styliserBoutons() {
 		for (Node node : conteneurBouton.getChildren()) {
 			if (node instanceof Button btn) {
-				StyleUtilitaire.styleBouton(btn);
+				StyleUtilitaire.effetOmbreEtGlow(btn);
 			}
 		}
 	}
