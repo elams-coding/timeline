@@ -45,3 +45,12 @@
     -fx-background-color: white;
 }
 
+.choice-box {
+    -fx-background-color: #2F2E65;
+    -fx-background-radius: 50;
+}
+
+.choice-box .arrow {
+    -fx-background-color: white;
+}
+

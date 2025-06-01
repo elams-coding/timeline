@@ -13,7 +13,7 @@
       <Label layoutX="89.0" layoutY="30.0" styleClass="titre" text="Temps de réponse" />
       <VBox alignment="CENTER" spacing="10.0">
          <children>
-            <Slider max="60.0" min="10.0" showTickLabels="true" value="30.0" />
+            <Slider max="60.0" min="10.0" showTickLabels="true" snapToTicks="true" value="30.0" />
             <Label contentDisplay="RIGHT" text="Temps">
                <graphic>
                   <Label text="(secondes)" />
