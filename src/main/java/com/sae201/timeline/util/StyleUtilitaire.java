@@ -1,12 +1,12 @@
 package com.sae201.timeline.util;
 
-import javafx.scene.control.Button;
+import javafx.scene.Node;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.effect.InnerShadow;
 import javafx.scene.paint.Color;
 
 public abstract class StyleUtilitaire {
-    public static void styleBouton(Button btn) {
+    public static void styleBouton(Node node) {
         DropShadow dropShadow = new DropShadow();
         dropShadow.setColor(Color.rgb(0, 0, 0, 0.3));
         dropShadow.setRadius(10);
@@ -20,7 +20,7 @@ public abstract class StyleUtilitaire {
         innerShadow.setOffsetY(4);
 
         dropShadow.setInput(innerShadow);
-        btn.setEffect(dropShadow);
+        node.setEffect(dropShadow);
     }
     
     public abstract void tailleBouton();
