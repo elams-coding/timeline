@@ -6,15 +6,15 @@
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="TOP_CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="400.0" spacing="30.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:id="root" alignment="TOP_CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="400.0" spacing="30.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sae201.timeline.controller.ChoixDuDeck">
    <children>
       <Label styleClass="titre" text="Choix du deck" />
-      <ChoiceBox prefWidth="150.0" />
+      <ChoiceBox fx:id="choixDeck" prefWidth="150.0" />
       <Label layoutX="89.0" layoutY="30.0" styleClass="titre" text="Temps de réponse" />
       <VBox alignment="CENTER" spacing="10.0">
          <children>
-            <Slider max="60.0" min="10.0" showTickLabels="true" snapToTicks="true" value="30.0" />
-            <Label contentDisplay="RIGHT" text="Temps">
+            <Slider fx:id="sliderTemps" majorTickUnit="10.0" max="60.0" min="10.0" minorTickCount="1" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="30.0" />
+            <Label fx:id="labelTemps" contentDisplay="RIGHT" text="Temps">
                <graphic>
                   <Label text="(secondes)" />
                </graphic></Label>
