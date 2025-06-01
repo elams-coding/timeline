@@ -13,16 +13,35 @@
     -fx-background-color: #2F2E65;
 }
 
+.button:hover {
+    -fx-background-color: derive(#2F2E65, -20%);
+}
+
 .button-left {
     -fx-background-radius: 0 50 50 0;
 }
-
 
 .button-right {
     -fx-background-radius: 50 0 0 50;
 }
 
+.button-nbjoueur {
+    -fx-pref-width: 270;
+}
+
 .titre {
     -fx-font-size: 35;
+}
+
+.slider .track {
+     -fx-background-color: linear-gradient(to right,
+         rgba(200, 0, 0, 1),
+         rgba(255, 255, 255, 0.3),
+         rgba(0, 0, 200, 1)
+     );
+}
+
+.slider .thumb {
+    -fx-background-color: white;
 }
 
