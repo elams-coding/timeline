@@ -35,7 +35,7 @@ public class NombreDeJoueur {
 			if (node instanceof HBox hbox) {
 				for (Node hboxChild : hbox.getChildren()) {
 					if (hboxChild instanceof Button btn) {
-						StyleUtilitaire.styleBouton(btn);
+						StyleUtilitaire.effetOmbreEtGlow(btn);
 					}
 				}
 			}
