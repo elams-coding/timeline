@@ -6,7 +6,7 @@ import javafx.scene.effect.InnerShadow;
 import javafx.scene.paint.Color;
 
 public abstract class StyleUtilitaire {
-    public static void styleBouton(Node node) {
+    public static void effetOmbreEtGlow(Node node) {
         DropShadow dropShadow = new DropShadow();
         dropShadow.setColor(Color.rgb(0, 0, 0, 0.3));
         dropShadow.setRadius(10);

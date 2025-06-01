@@ -37,7 +37,7 @@ public class Accueil extends StyleUtilitaire {
 			if (node instanceof Button btn) {
 				btn.setMaxWidth(largeurInitiale);
 				largeurInitiale -= 10;
-				StyleUtilitaire.styleBouton(btn);
+				StyleUtilitaire.effetOmbreEtGlow(btn);
 			}
 		}
 	}
