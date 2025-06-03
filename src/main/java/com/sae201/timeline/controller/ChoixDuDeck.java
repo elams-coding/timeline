@@ -35,6 +35,7 @@ public class ChoixDuDeck {
 		afficherTemps();
 		
 		// todo ajouter les decks au ChoiceBox
+		choixDeck.getItems().add(null);
 	}
 
 	private void afficherTemps() {
