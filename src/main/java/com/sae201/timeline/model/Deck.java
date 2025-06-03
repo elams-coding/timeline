@@ -32,7 +32,7 @@ public class Deck {
 		return cartes.remove(0);
 	}
 
-	public boolean hasMoreCards() {
+	public boolean aPlusDeCarte() {
 		return !cartes.isEmpty();
 	}
 
