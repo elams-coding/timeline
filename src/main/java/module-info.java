@@ -4,6 +4,8 @@ module timeline {
     requires javafx.graphics;
     requires java.logging;
 	requires javafx.base;
+	requires com.fasterxml.jackson.databind;
+	requires com.fasterxml.jackson.core;
 
     opens com.sae201.timeline to javafx.fxml;
 
