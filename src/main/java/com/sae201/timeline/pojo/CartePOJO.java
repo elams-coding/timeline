@@ -1,6 +1,6 @@
-package com.sae201.timeline.objet;
+package com.sae201.timeline.pojo;
 
-public class Carte {
+public class CartePOJO {
     public String titre;
     public String informations;
     public String date;

@@ -1,12 +1,12 @@
 package com.sae201.timeline.io;
 
-import com.sae201.timeline.objet.Carte;
+import com.sae201.timeline.pojo.CartePOJO;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public abstract class CarteLoader {
-	private List<Carte> cartes;
+	private List<CartePOJO> cartes;
 	private String titre;
 
 	public CarteLoader() {
@@ -15,11 +15,11 @@ public abstract class CarteLoader {
 
 	public abstract void load();
 
-	public List<Carte> getCards() {
+	public List<CartePOJO> getCards() {
 		return cartes;
 	}
 
-	public void ajouterCarte(Carte carte) {
+	public void ajouterCarte(CartePOJO carte) {
 		cartes.add(carte);
 	}
 

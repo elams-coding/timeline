@@ -1,6 +1,6 @@
 package com.sae201.timeline.controller;
 
-import com.sae201.timeline.objet.Deck;
+import com.sae201.timeline.pojo.CollectionPOJO;
 import com.sae201.timeline.util.StyleUtilitaire;
 
 import javafx.application.Platform;
@@ -17,7 +17,7 @@ public class ChoixDuDeck {
 	@FXML
 	private VBox root;
 	@FXML
-	private ChoiceBox<Deck> choixDeck;
+	private ChoiceBox<CollectionPOJO> choixDeck;
 	@FXML
 	private Slider sliderTemps;
 	@FXML
