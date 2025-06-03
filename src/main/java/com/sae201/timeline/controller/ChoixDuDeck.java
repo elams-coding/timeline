@@ -34,6 +34,8 @@ public class ChoixDuDeck {
 		}
 
 		afficherTemps();
+		
+		// todo ajouter les decks au ChoiceBox 
 	}
 
 	private void afficherTemps() {
