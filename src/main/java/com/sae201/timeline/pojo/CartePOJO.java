@@ -1,8 +1,8 @@
 package com.sae201.timeline.pojo;
 
 public class CartePOJO {
-    public String titre;
-    public String informations;
+    public String nom;
     public String date;
-    public String urlImage;
+    public String description;
+    public String url;
 }

@@ -18,16 +18,16 @@ public class JSONCarteLoader extends CarteLoader {
 	public void load() {
 		ObjectMapper objectMapper = new ObjectMapper();
 		objectMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
-		
+
 		CollectionPOJO result;
 		try {
 			File file = new File(PATH);
 			result = objectMapper.readValue(file, CollectionPOJO.class);
-			
+
 			setTitre(result.nom);
-			
+
 			int pos = 0;
-			for (CartePOJO cardP: result.cartes) {
+			for (CartePOJO cardP : result.cartes) {
 				ajouterCarte(new Carte(cardP, pos++));
 			}
 		} catch (JsonProcessingException e) {
@@ -36,7 +36,7 @@ public class JSONCarteLoader extends CarteLoader {
 			System.err.println("Probleme avec le fichier des données");
 			e.printStackTrace();
 		}
-		
+
 	}
 
 }

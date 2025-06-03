@@ -1,7 +1,7 @@
 package com.sae201.timeline.model;
 
-import com.sae201.timeline.io.CarteFakeLoader;
 import com.sae201.timeline.io.CarteLoader;
+import com.sae201.timeline.io.JSONCarteLoader;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -18,7 +18,7 @@ public class Deck {
 	}
 
 	private void setup() {
-		CarteLoader loader = new CarteFakeLoader();
+		CarteLoader loader = new JSONCarteLoader();
 		loader.load();
 		cartes = loader.getCartes();
 		titre = loader.getTitre();

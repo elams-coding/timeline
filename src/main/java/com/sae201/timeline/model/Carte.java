@@ -18,10 +18,10 @@ public class Carte {
 
 	public Carte(CartePOJO cardP, int position) {
 		super();
-		this.titre = cardP.titre;
+		this.titre = cardP.nom;
 		this.date = cardP.date;
 		this.position = position;
-		this.urlImage = cardP.urlImage;
+		this.urlImage = cardP.url;
 	}
 
 	public String getTitre() {

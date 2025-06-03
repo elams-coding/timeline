@@ -1,6 +1,5 @@
 package com.sae201.timeline.controller;
 
-import com.sae201.timeline.pojo.CollectionPOJO;
 import com.sae201.timeline.util.StyleUtilitaire;
 
 import javafx.application.Platform;
@@ -17,7 +16,7 @@ public class ChoixDuDeck {
 	@FXML
 	private VBox root;
 	@FXML
-	private ChoiceBox<CollectionPOJO> choixDeck;
+	private ChoiceBox<String> choixDeck;
 	@FXML
 	private Slider sliderTemps;
 	@FXML
@@ -35,7 +34,7 @@ public class ChoixDuDeck {
 
 		afficherTemps();
 		
-		// todo ajouter les decks au ChoiceBox 
+		// todo ajouter les decks au ChoiceBox
 	}
 
 	private void afficherTemps() {
