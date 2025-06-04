@@ -11,6 +11,14 @@
 
 <VBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="600.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sae201.timeline.controller.NombreDeJoueur">
    <children>
+      <ImageView fx:id="Maison" fitHeight="33.0" fitWidth="36.0" onMouseClicked="#retourMaison" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/maison.png" />
+         </image>
+         <VBox.margin>
+            <Insets left="10.0" top="10.0" />
+         </VBox.margin>
+      </ImageView>
       <Label alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="titre" text="Nombre de joueurs">
          <VBox.margin>
             <Insets />
@@ -61,6 +69,6 @@
       </HBox>
    </children>
    <padding>
-      <Insets bottom="20.0" top="20.0" />
+      <Insets bottom="20.0" />
    </padding>
 </VBox>

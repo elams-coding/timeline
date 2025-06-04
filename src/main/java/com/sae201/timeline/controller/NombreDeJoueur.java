@@ -2,20 +2,21 @@ package com.sae201.timeline.controller;
 
 import com.sae201.timeline.util.DialogueUtilitaire;
 import com.sae201.timeline.util.StyleUtilitaire;
-
-import java.io.IOException;
-
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class NombreDeJoueur {
 	public static int nbJoueur;
@@ -52,6 +53,23 @@ public class NombreDeJoueur {
 
 		ouvrirPopUp();
 	}
+
+	@FXML
+	private void retourMaison(MouseEvent event) {
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/sae201/timeline/accueil.fxml"));
+			Parent root = loader.load();
+
+			Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+			stage.setScene(new Scene(root));
+			stage.setResizable(false);
+			stage.show();
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
 
 	private void ouvrirPopUp() {
 		String cheminChoixDeck = "/com/sae201/timeline/choixDeck.fxml";
