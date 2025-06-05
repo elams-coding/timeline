@@ -277,7 +277,7 @@
             {
                 "nom" : "Alpine Linux",
                 "date" : "2006",
-                "description" : "Distribution ultra-légère, souvent utilisée dans les conteneurs Docker.",
+                "description" : "Distribution ultra-légère, utilisée la plus part du temps dans les conteneurs Docker.",
                 "url" : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Alpine_Linux.svg/500px-Alpine_Linux.svg.png"
             }
         ]
