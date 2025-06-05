@@ -81,3 +81,7 @@
     -fx-text-fill: white;
 }
 
+.hbox {
+    -fx-background-color: #2F2E65;
+    -fx-background-radius: 30;
+}
