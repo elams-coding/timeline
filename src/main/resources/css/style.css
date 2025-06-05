@@ -90,3 +90,8 @@
     -fx-background-color: #2F2E65;
     -fx-background-radius: 30;
 }
+
+.button-leave {
+    -fx-background-radius: 50;
+    -fx-pref-width: 175;
+}
