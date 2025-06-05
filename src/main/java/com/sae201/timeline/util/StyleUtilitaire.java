@@ -23,5 +23,16 @@ public abstract class StyleUtilitaire {
         node.setEffect(dropShadow);
     }
     
+    public static void cacherNode(Node... nodes) {
+		if (nodes.length == 0 || nodes == null) {
+			return;
+		}
+
+		for (Node node : nodes) {
+			node.setManaged(false);
+			node.setVisible(false);
+		}
+	}
+    
     public abstract void tailleBouton();
 }
