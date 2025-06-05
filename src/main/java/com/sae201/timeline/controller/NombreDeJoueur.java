@@ -2,6 +2,9 @@ package com.sae201.timeline.controller;
 
 import com.sae201.timeline.util.DialogueUtilitaire;
 import com.sae201.timeline.util.StyleUtilitaire;
+
+import java.io.IOException;
+
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,14 +19,14 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-
 public class NombreDeJoueur {
 	public static int nbJoueur;
 	@FXML
 	private VBox root;
 	@FXML
-	private Button unJoueur, deuxJoueurs;
+	private Button unJoueur;
+	@FXML
+	private Button deuxJoueurs;
 
 	@FXML
 	private void initialize() {
@@ -56,20 +59,18 @@ public class NombreDeJoueur {
 
 	@FXML
 	private void retourMaison(MouseEvent event) {
+		String cheminAccueil = "/com/sae201/timeline/accueil.fxml";
+		FXMLLoader loader = new FXMLLoader(getClass().getResource(cheminAccueil));
 		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/sae201/timeline/accueil.fxml"));
 			Parent root = loader.load();
-
 			Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 			stage.setScene(new Scene(root));
 			stage.setResizable(false);
 			stage.show();
-
 		} catch (IOException e) {
-			e.printStackTrace();
+			DialogueUtilitaire.afficherAlerte(e);
 		}
 	}
-
 
 	private void ouvrirPopUp() {
 		String cheminChoixDeck = "/com/sae201/timeline/choixDeck.fxml";
@@ -82,12 +83,30 @@ public class NombreDeJoueur {
 			nouvelleStage.setTitle("Choix du deck");
 			nouvelleStage.setResizable(false);
 			nouvelleStage.showAndWait();
+			
+			// todo fermer la page si la pop est fermé
+			if (ChoixDuDeck.jeuSOuvre) {
+				System.out.println(ChoixDuDeck.jeuSOuvre);
+				Stage stage = (Stage) root.getScene().getWindow();
+				ouvrirJeu(stage);
+			}
 		} catch (IOException e) {
 			if (e.getCause() != null) {
 				DialogueUtilitaire.alerterChargementVueImpossible(e.getCause().getMessage());
 			} else {
 				DialogueUtilitaire.alerterChargementVueImpossible(e.getMessage());
 			}
+		}
+	}
+	
+	private void ouvrirJeu(Stage stage) {
+		String cheminPlateauJeu = "/com/sae201/timeline/plateauJeu.fxml";
+		FXMLLoader loader = new FXMLLoader(getClass().getResource(cheminPlateauJeu));
+		try {
+			Scene scene = new Scene(loader.load());
+			stage.setScene(scene);
+		} catch (IOException e) {
+			DialogueUtilitaire.afficherAlerte(e);
 		}
 	}
 }
