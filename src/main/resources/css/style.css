@@ -120,3 +120,10 @@
     -fx-border-radius: 10;
     -fx-padding: 5;
 }
+.bouton-supprimer:hover {
+    -fx-background-color: #ff6666 !important;
+}
+
+.bouton-supprimer:pressed {
+    -fx-background-color: #cc0000 !important;
+}

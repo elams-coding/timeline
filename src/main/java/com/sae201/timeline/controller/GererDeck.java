@@ -33,6 +33,9 @@ public class GererDeck {
 	@FXML
 	private ImageView flecheGauche, flecheDroite;
 
+	@FXML
+	private Button listeButton;
+
 	private int indexDeckActuel = 0;
 	private final List<CarteLoader> deckLoaders = new ArrayList<>();
 
@@ -56,19 +59,15 @@ public class GererDeck {
 		}
 	}
 	private void afficherDeck() {
-		centreDeck.getChildren().clear();
+		centreDeck.getChildren().clear(); // Vider le contenu précédent
 
 		if (deckLoaders.isEmpty()) return;
 
-		Node node = creerDeckNode(deckLoaders.get(indexDeckActuel), 150, 1.0);
-		// Centrage parfait en utilisant les quatre ancres
-		AnchorPane.setTopAnchor(node, 0.0);
-		AnchorPane.setBottomAnchor(node, 0.0);
-		AnchorPane.setLeftAnchor(node, 0.0);
-		AnchorPane.setRightAnchor(node, 0.0);
+		Node node = creerDeckNode(deckLoaders.get(indexDeckActuel), 150, 1.0); // deck normal
+		AnchorPane.setTopAnchor(node, 10.0);
+		AnchorPane.setLeftAnchor(node, (centreDeck.getPrefWidth() - 150) / 2); // centré
 		centreDeck.getChildren().add(node);
 	}
-
 
 
 
@@ -108,4 +107,33 @@ public class GererDeck {
 			afficherDeck();
 		}
 	}
+	@FXML
+	private void allerVersListe() {
+		try {
+			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/sae201/timeline/deckListe.fxml"));
+			Node listePage = fxmlLoader.load();
+
+			DeckListe controller = fxmlLoader.getController();
+			controller.setDecks(deckLoaders);
+
+			root.getChildren().clear();
+			root.getChildren().add(listePage);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	public void mettreAJourDecks(List<CarteLoader> nouveauxDecks) {
+		this.deckLoaders.clear();
+		this.deckLoaders.addAll(nouveauxDecks);
+		indexDeckActuel = Math.min(indexDeckActuel, deckLoaders.size() - 1);
+		if (indexDeckActuel < 0 && !deckLoaders.isEmpty()) {
+			indexDeckActuel = 0;
+		}
+		afficherDeck();
+	}
+	public List<CarteLoader> getDeckLoaders() {
+		return deckLoaders;
+	}
+
+
 }

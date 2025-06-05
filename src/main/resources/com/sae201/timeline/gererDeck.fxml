@@ -22,7 +22,7 @@
                         <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" styleClass="button-left" text="Créer un nouveau deck" />
                         <Button layoutX="10.0" layoutY="214.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" styleClass="button-left" text="Supprimer le deck" />
                         <Button layoutX="10.0" layoutY="265.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" styleClass="button-left" text="Modifier le deck" />
-                        <Button layoutX="10.0" layoutY="316.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" styleClass="button-left" text="Affichage en liste" />
+                        <Button fx:id="listeButton" layoutX="10.0" layoutY="316.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#allerVersListe" prefHeight="50.0" styleClass="button-left" text="Affichage en liste" />
                      </children>
                   </VBox>
                   <VBox prefHeight="285.0" prefWidth="321.0">
