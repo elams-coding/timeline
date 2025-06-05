@@ -1,10 +1,11 @@
 package com.sae201.timeline.controller;
 
+import com.sae201.timeline.io.CarteLoader;
+import com.sae201.timeline.io.JSONCarteLoader;
 import com.sae201.timeline.util.StyleUtilitaire;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
@@ -29,13 +30,14 @@ public class ChoixDuDeck {
 		Platform.runLater(() -> StyleUtilitaire.effetOmbreEtGlow(choixDeck));
 
 		if (NombreDeJoueur.nbJoueur == 1) {
-			cacherNode(sliderTemps, label, labelTemps);
+			StyleUtilitaire.cacherNode(sliderTemps, label, labelTemps);
 		}
 
 		afficherTemps();
 		
-		// todo ajouter les decks au ChoiceBox
-		choixDeck.getItems().add(null);
+		choixDeck.setValue("Deck à choisir");
+
+		loadDecksIntoChoiceBox();
 	}
 
 	private void afficherTemps() {
@@ -50,14 +52,14 @@ public class ChoixDuDeck {
 		});
 	}
 
-	private void cacherNode(Node... nodes) {
-		if (nodes.length == 0 || nodes == null) {
-			return;
-		}
+	private void loadDecksIntoChoiceBox() {
+		// choisir soit JSON ou FAKE
+		CarteLoader carteLoader = new JSONCarteLoader();
+		carteLoader.load();
 
-		for (Node node : nodes) {
-			node.setManaged(false);
-			node.setVisible(false);
-		}
+		choixDeck.getItems().clear();
+		System.out.println(carteLoader.getTitre());
+		choixDeck.getItems().add(carteLoader.getTitre());
 	}
+
 }
