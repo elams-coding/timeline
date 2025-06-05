@@ -6,6 +6,7 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -14,7 +15,12 @@
    <center>
       <VBox maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="625.0" prefWidth="800.0" spacing="20.0">
          <children>
-            <Label alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="titre" text="PARTIE DE TIMELINE" />
+            <AnchorPane>
+               <children>
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="titre" text="PARTIE DE TIMELINE" />
+                  <Label fx:id="temps" alignment="CENTER" layoutX="732.0" layoutY="11.0" maxWidth="1.7976931348623157E308" text="60" />
+               </children>
+            </AnchorPane>
             <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="NEVER">
                <content>
                   <HBox fx:id="plateau" alignment="CENTER" prefHeight="277.0" spacing="20.0" styleClass="hbox">
