@@ -10,9 +10,11 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 public class ChoixDuDeck {
 	public static int temps;
+	public static boolean jeuSOuvre;
 
 	@FXML
 	private VBox root;
@@ -38,13 +40,15 @@ public class ChoixDuDeck {
 		choixDeck.setValue("Deck à choisir");
 
 		loadDecksIntoChoiceBox();
+		
+		jeuSOuvre = false;
 	}
 
 	private void afficherTemps() {
 		int valeurInitial = (int) sliderTemps.getValue();
 		temps = valeurInitial;
 		labelTemps.setText(String.format("%02d", valeurInitial));
-
+ 
 		sliderTemps.valueProperty().addListener((obs, oldVal, newVal) -> {
 			int valeur = newVal.intValue();
 			temps = valeur;
@@ -60,5 +64,11 @@ public class ChoixDuDeck {
 		choixDeck.getItems().clear();
 		System.out.println(carteLoader.getTitre());
 		choixDeck.getItems().add(carteLoader.getTitre());
+		
+		choixDeck.setOnAction(event -> {
+			jeuSOuvre = !jeuSOuvre;
+			Stage stage = (Stage) root.getScene().getWindow();
+			stage.close();
+		});
 	}
 }
