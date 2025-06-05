@@ -54,3 +54,30 @@
     -fx-background-color: white;
 }
 
+.choice-box:showing .arrow {
+    -fx-shape: "M 0 5 L 5 0 L 10 5 Z";
+}
+
+.choice-box .context-menu {
+    -fx-background-color: #14133A;
+    -fx-background-radius: 10;
+    -fx-border-color: white;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 30;
+    -fx-padding: 5;
+}
+
+.choice-box .menu-item:focused {
+    -fx-background-color: #2F2E65;
+    -fx-background-radius: 50;
+    -fx-cursor: hand;
+}
+
+.choice-box .menu-item .label {
+    -fx-text-fill: gray;
+}
+
+.choice-box .menu-item:focused .label {
+    -fx-text-fill: white;
+}
+
