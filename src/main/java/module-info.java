@@ -14,4 +14,8 @@ module timeline {
     opens com.sae201.timeline.controller to javafx.fxml;
 
     exports com.sae201.timeline.controller;
+    
+    opens com.sae201.timeline.pojo to com.fasterxml.jackson.databind;
+    
+    exports com.sae201.timeline.pojo;
 }
