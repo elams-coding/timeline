@@ -36,7 +36,5 @@ public class JSONCarteLoader extends CarteLoader {
 			System.err.println("Probleme avec le fichier des données");
 			e.printStackTrace();
 		}
-
 	}
-
 }
