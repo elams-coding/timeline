@@ -34,7 +34,7 @@ public class ChoixDuDeck {
 		}
 
 		afficherTemps();
-		
+
 		choixDeck.setValue("Deck à choisir");
 
 		loadDecksIntoChoiceBox();
@@ -61,5 +61,4 @@ public class ChoixDuDeck {
 		System.out.println(carteLoader.getTitre());
 		choixDeck.getItems().add(carteLoader.getTitre());
 	}
-
 }
