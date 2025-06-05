@@ -63,6 +63,7 @@ public class ChoixDuDeck {
 
 		choixDeck.getItems().clear();
 		System.out.println(carteLoader.getTitre());
+		// todo Faire la list des titres
 		choixDeck.getItems().add(carteLoader.getTitre());
 		
 		choixDeck.setOnAction(event -> {
