@@ -84,9 +84,7 @@ public class NombreDeJoueur {
 			nouvelleStage.setResizable(false);
 			nouvelleStage.showAndWait();
 			
-			// todo fermer la page si la pop est fermé
 			if (ChoixDuDeck.jeuSOuvre) {
-				System.out.println(ChoixDuDeck.jeuSOuvre);
 				Stage stage = (Stage) root.getScene().getWindow();
 				ouvrirJeu(stage);
 			}
@@ -104,7 +102,11 @@ public class NombreDeJoueur {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource(cheminPlateauJeu));
 		try {
 			Scene scene = new Scene(loader.load());
+			stage.setTitle("Timeline");
+			stage.setResizable(true);
 			stage.setScene(scene);
+			stage.setOnCloseRequest(event -> Platform.exit());
+			stage.centerOnScreen();
 		} catch (IOException e) {
 			DialogueUtilitaire.afficherAlerte(e);
 		}
