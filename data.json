@@ -157,5 +157,128 @@
                 "description": "Swift est un langage de programmation objet compilé, multi-paradigmes, qui se veut simple, performant et sûr. Il est développé en open source. Le projet de développement de Swift est géré par Apple, qui en est également le principal contributeur ; mais de nombreux membres de la communauté Swift, ainsi que d'autres acteurs, tels que Google et IBM, participent également à son développement.",
                 "url":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Swift_logo.svg/131px-Swift_logo.svg.png"
             }
+        ],
+    "nom": "Les Distributions Linux",
+        "cartes": [
+            {
+                "nom" : "Ubuntu",
+                "date" : "2004",
+                "description" : "Distribution populaire basée sur Debian, conviviale pour les débutants.",
+                "url" : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Ubuntu-logo-2022.svg/langfr-330px-Ubuntu-logo-2022.svg.png"
+            },
+            {
+                "nom" : "Debian",
+                "date" : "1993",
+                "description" : "Distribution mère de nombreuses autres, réputée pour sa stabilité.",
+                "url" : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Debian-OpenLogo.svg/langfr-75px-Debian-OpenLogo.svg.png"
+            },
+            {
+                "nom" : "Fedora",
+                "date" : "2002",
+                "description" : "Distribution communautaire sponsorisée par Red Hat, toujours à la pointe.",
+                "url" : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Fedora_logo_%282021%29.svg/langfr-330px-Fedora_logo_%282021%29.svg.png"
+            },
+            {
+                "nom" : "Arch Linux",
+                "date" : "2002",
+                "description" : "Distribution minimaliste orientée utilisateurs avancés, modèle rolling release.",
+                "url" : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Archlinux-logo-standard-version.svg/langfr-500px-Archlinux-logo-standard-version.svg.png"
+            },
+            {
+                "nom" : "Linux Mint",
+                "date" : "2006",
+                "description" : "Distribution dérivée d'Ubuntu, axée sur la facilité d'utilisation.",
+                "url" : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/The_Linux_Mint_Logo.svg/langfr-500px-The_Linux_Mint_Logo.svg.png"
+            },
+            {
+                "nom" : "openSUSE",
+                "date" : "2005",
+                "description" : "Distribution communautaire soutenue par SUSE, réputée pour YaST.",
+                "url" : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/OpenSUSE_Logo.svg/langfr-330px-OpenSUSE_Logo.svg.png"
+            },
+            {
+                "nom" : "Manjaro",
+                "date" : "2011",
+                "description" : "Basée sur Arch Linux, simplifie l'installation et l'utilisation.",
+                "url" : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Logo_manjaro_rounded_2022.svg/langfr-500px-Logo_manjaro_rounded_2022.svg.png"
+            },
+            {
+                "nom" : "Red Hat Enterprise Linux",
+                "date" : "2000",
+                "description" : "Distribution commerciale pour entreprises, axée sur la stabilité.",
+                "url" : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Red_Hat_logo.svg/langfr-120px-Red_Hat_logo.svg.png"
+            },
+            {
+                "nom" : "CentOS",
+                "date" : "2004",
+                "description" : "Clone gratuit de RHEL (abandonné au profit de CentOS Stream en 2021)",
+                "url" : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Centos-logo-2022.svg/langfr-500px-Centos-logo-2022.svg.png"
+            },
+            {
+                "nom" : "Kali Linux",
+                "date" : "2013",
+                "description" : "Distribution dédiée au pentesting et à la sécurité informatique.",
+                "url" : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Kali_Linux_2.0_wordmark.svg/langfr-420px-Kali_Linux_2.0_wordmark.svg.png"
+            },
+            {
+                "nom" : "Zorin OS",
+                "date" : "2009",
+                "description" : "Basée sur Ubuntu, conçue pour aider les utilisateurs Windows à migrer.",
+                "url" : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Zorin_Logomark.svg/langfr-120px-Zorin_Logomark.svg.png"
+            },
+            {
+                "nom" : "Elementary OS",
+                "date" : "2011",
+                "description" : "Basée sur Ubuntu, met l'accent sur l’esthétique et la simplicité.",
+                "url" : "https://commons.wikimedia.org/w/index.php?title=File:Elementary_OS_logo.svg&lang=fr&uselang=fr"
+            },
+            {
+                "nom" : "Slackware",
+                "date" : "1993",
+                "description" : "Une des plus anciennes distributions, connue pour sa simplicité technique.",
+                "url" : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Slackware_web_logo.svg/langfr-420px-Slackware_web_logo.svg.png"
+            },
+            {
+                "nom" : "Puppy Linux",
+                "date" : "2003",
+                "description" : "Distribution ultra-légère conçue pour les vieux PC.",
+                "url" : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Puppy_Linux_Slacko_5.7.png/500px-Puppy_Linux_Slacko_5.7.png"
+            },
+            {
+                "nom" : "MX Linux",
+                "date" : "2014",
+                "description" : "Basée sur Debian, légère et très bien optimisée pour la performance.",
+                "url" : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/MX_LINUX_Logo.svg/langfr-250px-MX_LINUX_Logo.svg.png"
+            },
+            {
+                "nom" : "Peppermint OS",
+                "date" : "2010",
+                "description" : "Distribution légère et cloud-friendly, basée sur Debian/Ubuntu.",
+                "url" : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Peppermint_3.svg/langfr-144px-Peppermint_3.svg.png"
+            },
+            {
+                "nom" : "Tails",
+                "date" : "2009",
+                "description" : "Distribution axée sur la vie privée et l’anonymat (basée sur Debian).",
+                "url" : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Tails-logo-flat.svg/langfr-250px-Tails-logo-flat.svg.png"
+            },
+            {
+                "nom" : "Deepin",
+                "date" : "2004",
+                "description" : "Distribution chinoise connue pour son environnement de bureau élégant.",
+                "url" : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Deepin_logo.svg/langfr-144px-Deepin_logo.svg.png"
+            },
+            {
+                "nom" : "Parrot OS",
+                "date" : "2013",
+                "description" : "Conçue pour les tests de sécurité, forensics et développement logiciel.",
+                "url" : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Parrot_OS_Desktop.png/500px-Parrot_OS_Desktop.png"
+            },
+            {
+                "nom" : "Alpine Linux",
+                "date" : "2006",
+                "description" : "Distribution ultra-légère, utilisée la plus part du temps dans les conteneurs Docker.",
+                "url" : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Alpine_Linux.svg/500px-Alpine_Linux.svg.png"
+            }
         ]
 }
