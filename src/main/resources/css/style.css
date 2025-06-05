@@ -95,3 +95,28 @@
     -fx-background-radius: 50;
     -fx-pref-width: 175;
 }
+
+.menu-bar {
+    -fx-background-color: #2F2E65;
+    -fx-background-radius: 0 0 10 10;
+}
+
+.menu-bar .menu:hover,
+.menu-bar .menu:showing,
+.menu-bar .menu-item:focused {
+    -fx-background-color: #2F2E65;
+    -fx-background-radius: 50;
+}
+
+.context-menu,
+.menu-bar .menu-item {
+    -fx-background-color: #14133A;
+}
+
+.context-menu {
+    -fx-background-radius: 10;
+    -fx-border-color: white;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 10;
+    -fx-padding: 5;
+}
