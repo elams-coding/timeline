@@ -102,8 +102,12 @@
 }
 
 .menu-bar .menu:hover,
-.menu-bar .menu:showing,
-.menu-bar .menu-item:focused {
+.menu-bar .menu:showing {
+    -fx-background-color: #14133A;
+    -fx-background-radius: 50;
+}
+
+.menu-bar .menu-item:hover {
     -fx-background-color: #2F2E65;
     -fx-background-radius: 50;
 }
