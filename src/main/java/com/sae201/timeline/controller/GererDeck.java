@@ -41,11 +41,13 @@ public class GererDeck {
 	public void initialize() {
 		CarteLoader fakeDeck = new CarteFakeLoader();
 		fakeDeck.load();
-		deckLoaders.add(fakeDeck);
-		afficherCarousel();
+		deckLoaders.add(fakeDeck); // Ajoute ton deck de test
+		afficherDeck(); // Affiche le premier deck
+
 		Platform.runLater(this::styliserBoutons);
 	}
-	
+
+
 	private void styliserBoutons() {
 		for (Node node : conteneurBouton.getChildren()) {
 			if (node instanceof Button btn) {
@@ -53,33 +55,22 @@ public class GererDeck {
 			}
 		}
 	}
-	private void afficherCarousel() {
+	private void afficherDeck() {
 		centreDeck.getChildren().clear();
 
 		if (deckLoaders.isEmpty()) return;
 
-		// Deck précédent
-		if (indexDeckActuel > 0) {
-			Node gauche = creerDeckNode(deckLoaders.get(indexDeckActuel - 1), 100, 0.5);
-			AnchorPane.setLeftAnchor(gauche, 10.0);
-			AnchorPane.setTopAnchor(gauche, 25.0);
-			centreDeck.getChildren().add(gauche);
-		}
-
-		// Deck courant
-		Node centre = creerDeckNode(deckLoaders.get(indexDeckActuel), 180, 1.0);
-		AnchorPane.setLeftAnchor(centre, 100.0);
-		AnchorPane.setTopAnchor(centre, 10.0);
-		centreDeck.getChildren().add(centre);
-
-		// Deck suivant
-		if (indexDeckActuel < deckLoaders.size() - 1) {
-			Node droite = creerDeckNode(deckLoaders.get(indexDeckActuel + 1), 100, 0.5);
-			AnchorPane.setRightAnchor(droite, 10.0);
-			AnchorPane.setTopAnchor(droite, 25.0);
-			centreDeck.getChildren().add(droite);
-		}
+		Node node = creerDeckNode(deckLoaders.get(indexDeckActuel), 150, 1.0);
+		// Centrage parfait en utilisant les quatre ancres
+		AnchorPane.setTopAnchor(node, 0.0);
+		AnchorPane.setBottomAnchor(node, 0.0);
+		AnchorPane.setLeftAnchor(node, 0.0);
+		AnchorPane.setRightAnchor(node, 0.0);
+		centreDeck.getChildren().add(node);
 	}
+
+
+
 
 	private Node creerDeckNode(CarteLoader loader, double taille, double opacite) {
 		try {
@@ -106,7 +97,7 @@ public class GererDeck {
 	private void deckSuivant() {
 		if (indexDeckActuel < deckLoaders.size() - 1) {
 			indexDeckActuel++;
-			afficherCarousel();
+			afficherDeck();
 		}
 	}
 
@@ -114,7 +105,7 @@ public class GererDeck {
 	private void deckPrecedent() {
 		if (indexDeckActuel > 0) {
 			indexDeckActuel--;
-			afficherCarousel();
+			afficherDeck();
 		}
 	}
 }
