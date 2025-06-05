@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox fx:id="root" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="20.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sae201.timeline.controller.Pause">
+   <children>
+      <Button mnemonicParsing="false" onAction="#retourJeu" styleClass="button-leave" text="Retour au jeu" />
+      <Button mnemonicParsing="false" onAction="#sauvegarder" styleClass="button-leave" text="Sauvegarder" />
+      <Button mnemonicParsing="false" onAction="#quitter" styleClass="button-leave" text="Quitter" />
+   </children>
+</VBox>
