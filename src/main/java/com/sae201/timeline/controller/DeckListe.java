@@ -46,7 +46,7 @@ public class DeckListe {
         container.setAlignment(Pos.CENTER_LEFT);
         container.setSpacing(15);
         container.setPadding(new Insets(10));
-        container.setStyle("-fx-background-color: #f4f4f4; -fx-background-radius: 5;");
+        container.setStyle("-fx-background-color: #000000; -fx-background-radius: 5;");
 
         // Image
         ImageView imageView = new ImageView();
@@ -84,9 +84,9 @@ public class DeckListe {
 
         // Effets hover
         container.setOnMouseEntered(e ->
-                container.setStyle("-fx-background-color: #e0e0e0; -fx-background-radius: 5;"));
+                container.setStyle("-fx-background-color: #aeaeae; -fx-background-radius: 5;"));
         container.setOnMouseExited(e ->
-                container.setStyle("-fx-background-color: #f4f4f4; -fx-background-radius: 5;"));
+                container.setStyle("-fx-background-color: #000000; -fx-background-radius: 5;"));
 
         return container;
     }
